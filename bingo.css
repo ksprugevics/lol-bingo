@@ -1,0 +1,33 @@
+html *
+{
+   background: #0d1b2a;
+   color: #e0e1dd;
+   font-family: 'Pangolin', cursive !important;
+}
+
+.bingoButton {
+    width: 150px;
+    height: 150px;
+    border-radius: 25px;
+    border: none;
+    background: #415a77;
+    transition: background-color 50ms ease-out 50ms;
+    font-size: 25px;
+}
+
+.bingoButton:hover {
+	background: #778da9;
+}
+
+.bingoButtonCheck {
+    background: #588157;
+}
+
+.bigngoButtonBlink {
+    animation: blinker 1s linear infinite alternate;
+}
+
+@keyframes blinker {
+    from { background: #415a77; }
+    to { background: #0077b6; }
+}
