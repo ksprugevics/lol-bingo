@@ -33,6 +33,8 @@ function setupCards() {
     let cards = shuffleCards();
     $(".bingoButton").each(function(i, obj) {
         $(this).html(cards[i]);
+        $(this).removeClass("bingoButtonCheck");
+        $(this).removeClass("bigngoButtonBlink");
     });
 }
 
