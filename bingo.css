@@ -23,7 +23,7 @@ html *
     background: #588157;
 }
 
-.bigngoButtonBlink {
+.bingoButtonBlink {
     animation: blinker 1s linear infinite alternate;
 }
 
