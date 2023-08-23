@@ -84,7 +84,7 @@ $(document).ready(function() {
     }
 
     function handleWin() {
-        alert('You win!');
+        startAnimation();
         $('.bingoButton').each(function() {
             const buttonId = $(this).attr('id');
             const [row, col] = buttonId.slice(2).split('').map(Number);
@@ -100,7 +100,82 @@ $(document).ready(function() {
         updateGameState(buttonId);
     });
 
+
     $('.resetButton').click(function() {
+        stopAnimation();
         setupCards();
     });
+
+
+    // Confetti
+    let canvas = document.createElement('canvas');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    document.body.appendChild(canvas);
+    let ctx = canvas.getContext('2d');
+
+    let animationInterval = null;
+    const confettiColors = ['#e74c3c', '#3498db', '#1abc9c', '#f39c12', '#9b59b6', '#e67e22'];
+    const confettiParticles = [];
+
+
+    function createConfettiParticle() {
+      return {
+        x: Math.random() * canvas.width,
+        y: -10,
+        size: Math.random() * 20 + 5,
+        color: confettiColors[Math.floor(Math.random() * confettiColors.length)],
+        rotation: Math.random() * 360,
+        speed: Math.random() * 2 + 1,
+      };
+    }
+
+
+    function drawConfettiParticle(particle) {
+        ctx.beginPath();
+        ctx.fillStyle = particle.color;
+        ctx.translate(particle.x, particle.y);
+        ctx.rotate((particle.rotation * Math.PI) / 180);
+        ctx.fillRect(-particle.size / 2, -particle.size / 2, particle.size, particle.size);
+        ctx.rotate((-particle.rotation * Math.PI) / 180);
+        ctx.translate(-particle.x, -particle.y);
+        ctx.closePath();
+    }
+
+
+    function updateConfettiParticles() {
+        for (let i = 0; i < confettiParticles.length; i++) {
+            const particle = confettiParticles[i];
+            particle.y += particle.speed;
+            if (particle.y > canvas.height + 20) {
+                confettiParticles.splice(i, 1);
+                i--;
+            }
+        }
+    }
+
+
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (const particle of confettiParticles) {
+            drawConfettiParticle(particle);
+        }
+        updateConfettiParticles();
+        requestAnimationFrame(animate);
+    }
+
+
+    function startAnimation() {
+        animationInterval = setInterval(() => {
+            confettiParticles.push(createConfettiParticle());
+        }, 100);
+        animate();
+    }
+
+
+    function stopAnimation() {
+        clearInterval(animationInterval);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        confettiParticles.length = 0;
+    }
 });

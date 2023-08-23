@@ -1,18 +1,63 @@
 html *
 {
-   background: #0d1b2a;
    color: #e0e1dd;
-   font-family: 'Pangolin', cursive !important;
+   font-family: 'Merienda One', cursive !important;
+}
+
+.header {
+    text-align: center;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+  
+.header h1 {
+    font-size: 6rem;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+      radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.8) 100%),
+      url('resources/background.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.game-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.button-grid-container {
+    width: 100%;
+    max-width: 720px;
+    max-height: 720px;
+    margin: 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
 }
 
 .bingoButton {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
+    margin: 5px;
     border-radius: 25px;
     border: none;
-    background: #415a77;
+    background: #3C4856;
     transition: background-color 50ms ease-out 50ms;
-    font-size: 25px;
+    font-size: 1.2rem;
 }
 
 .bingoButton:hover {
@@ -27,7 +72,28 @@ html *
     animation: blinker 1s linear infinite alternate;
 }
 
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+
 @keyframes blinker {
     from { background: #415a77; }
     to { background: #0077b6; }
+}
+
+.resetButton {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #0077b6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }

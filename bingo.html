@@ -8,24 +8,17 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
   <link href="bingo.css" rel="stylesheet">
 </head>
 
-<body>
-  <div class="container-fluid text-center">
+<div id="confettiContainer"></div>
+<body class="background">
+  <div class="header">
     <h1>LoL Bingo!</h1>
   </div>
-  <br/>
-  <br/>
-  <br/>
-  <div class="container-fluid text-center">
-    <h4>Summoner's rift - ARAM</h4>
-  </div>
-  <br/>
-  <br/>
-  <div class="container-fluid">
-    <div class="row">
+  <div class="button-grid-container">
+    <div class="button-grid">
       <center>
         <table>
           <tr>
@@ -53,12 +46,11 @@
             <td><button id="sq33" class="bingoButton">Condition 4-4</button></td>
           </tr>
         </table>
-        <br>
-        <br>
-        <input type="button" class="resetButton btn btn-lg btn-danger btn-block" value="GENERATE!"/>
+        <input type="button" class="resetButton btn btn-lg btn-danger btn-block" value="Restart!"/>
       </center>
     </div>
   </div>
+
 </body>
   <script src="bingo.js"></script>
 </html>
