@@ -84,6 +84,11 @@ $(document).ready(function() {
     }
 
     function handleWin() {
+        
+        setTimeout(function() {
+            $(".splashScreen").addClass("active fade-out");
+        }, 100);
+        
         startAnimation();
         $('.bingoButton').each(function() {
             const buttonId = $(this).attr('id');
@@ -149,7 +154,7 @@ $(document).ready(function() {
         }
     }
     
-    
+
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         for (const particle of confettiParticles) {

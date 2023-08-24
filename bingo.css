@@ -97,3 +97,44 @@ canvas {
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+.splashScreen {
+    position: relative;
+    text-align: center; 
+    animation: explode 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s both;
+    animation-play-state: paused;
+    position: fixed;
+}
+
+.splashScreen.active {
+    animation-play-state: running;
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.splashScreenText {
+    font-size: 10rem;
+    white-space: nowrap;
+    opacity: 1;
+    transform: rotate(-15deg);
+    display: inline-block;
+    transform-origin: top left;
+}
+
+.fade-out {
+    animation: fadeOut 3s ease-in forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+}
