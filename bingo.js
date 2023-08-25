@@ -84,11 +84,7 @@ $(document).ready(function() {
     }
 
     function handleWin() {
-        
-        setTimeout(function() {
-            $(".splashScreen").addClass("active fade-out");
-        }, 100);
-        
+        showSplashScreen()
         startAnimation();
         $('.bingoButton').each(function() {
             const buttonId = $(this).attr('id');
@@ -99,6 +95,25 @@ $(document).ready(function() {
         });
     }
 
+    function showSplashScreen() {
+        var splashScreenRight = $("<div>", {
+            "class": "splashScreenRight",
+            html: $("<div>", {
+              "class": "splashScreenText",
+              html: "Winner!"
+            })
+        });
+
+        $('.background').append(splashScreenRight);
+        var splashScreenLeft = $("<div>", {
+            "class": "splashScreenLeft",
+            html: $("<div>", {
+              "class": "splashScreenText",
+              html: "Winner!"
+            })
+        });
+        $('.background').append(splashScreenLeft);
+    }
 
     $('.bingoButton').click(function() {
         const buttonId = $(this).attr('id');
@@ -109,6 +124,7 @@ $(document).ready(function() {
     $('.resetButton').click(function() {
         stopAnimation();
         setupCards();
+        $('.splashScreen').remove();
     });
 
     const canvas = document.createElement('canvas');
