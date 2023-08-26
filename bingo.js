@@ -34,11 +34,14 @@ $(document).ready(function() {
 
     function setupCards() {
         let cards = shuffleCards();
-        $(".bingoButton").each(function(i, obj) {
+        $('.bingoButton').each(function(i, obj) {
             $(this).html(cards[i]);
-            $(this).removeClass("bingoButtonCheck");
-            $(this).removeClass("bingoButtonBlink");
+            $(this).removeClass('bingoButtonCheck');
+            $(this).removeClass('bingoButtonBlink');
+            $(this).removeAttr('disabled');
         });
+        $('.splashScreenLeft').remove()
+        $('.splashScreenRight').remove()
         boardState = {}
         rowCount = [0, 0, 0, 0];
         colCount = [0, 0, 0, 0];
@@ -83,6 +86,7 @@ $(document).ready(function() {
         }
     }
 
+
     function handleWin() {
         showSplashScreen()
         startAnimation();
@@ -92,9 +96,11 @@ $(document).ready(function() {
             if (rowCount[row] === 4 || colCount[col] === 4 || (row === col && diag1Count === 4) || (row + col === 3 && diag2Count === 4)) {
                 $(this).addClass('bingoButtonBlink');
             }
+            $(this).attr('disabled', 'true');
         });
     }
 
+    
     function showSplashScreen() {
         var splashScreenRight = $("<div>", {
             "class": "splashScreenRight",
@@ -115,6 +121,7 @@ $(document).ready(function() {
         $('.background').append(splashScreenLeft);
     }
 
+
     $('.bingoButton').click(function() {
         const buttonId = $(this).attr('id');
         updateGameState(buttonId);
@@ -127,6 +134,7 @@ $(document).ready(function() {
         $('.splashScreen').remove();
     });
 
+    // Confetti
     const canvas = document.createElement('canvas');
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
