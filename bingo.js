@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    const CARDS = [
+    const riftCards = [
         "Someone gets a pentakill",
         "Racial slurs",
         "GG EZ",
@@ -49,6 +49,7 @@ $(document).ready(function() {
     let colCount = [0, 0, 0, 0];
     let diag1Count = 0;
     let diag2Count = 0;
+    let mode = "rift";
     setupCards();
 
 
@@ -72,7 +73,9 @@ $(document).ready(function() {
 
     // https://stackoverflow.com/a/46545530
     function shuffleCards() {
-        let shuffledCards = CARDS
+        let deck = mode ===  "rift" ? riftCards : aramCards;
+
+        let shuffledCards = deck
             .map(value => ({value, sort: Math.random()}))
             .sort((a, b) => a.sort - b.sort)
             .map(({value}) => value)
@@ -85,7 +88,7 @@ $(document).ready(function() {
         const [row, col] = buttonId.slice(2).split('').map(Number);
         
         if (boardState[buttonId]) {
-            boardState[buttonId] = false;
+            delete boardState[buttonId];
             button.removeClass('bingoButtonCheck');
             rowCount[row]--;
             colCount[col]--;
@@ -153,6 +156,28 @@ $(document).ready(function() {
         setupCards();
         $('.splashScreen').remove();
     });
+
+
+    $('#switch').change(function() {
+        let userConfirmed = true;
+        if (Object.keys(boardState).length !== 0) {
+            userConfirmed = window.confirm("Are you sure you want to switch modes and start a new game?");
+        }
+
+        if ($(this).is(':checked')) {
+            mode = "aram";
+        } else {
+            mode = "rift"
+        }
+
+        if (!userConfirmed) {
+            $(this).prop('checked', !$(this).prop('checked'));
+        } else {
+            $('.background').toggleClass('aram');
+            setupCards();
+        }
+      });
+
 
     // Confetti
     const canvas = document.createElement('canvas');

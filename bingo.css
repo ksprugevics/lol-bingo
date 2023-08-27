@@ -22,23 +22,24 @@ html *
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: 
-      linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
-      radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.8) 100%),
-      url('resources/background.jpg');
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+        radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.8) 100%),
+        url('resources/background_rift.jpg');
+} 
 
-.game-container {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
+.background.aram {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+        radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.8) 100%),
+        url('resources/background_aram.jpg');
 }
 
-.button-grid-container {
+.buttonGridContainer {
     width: 100%;
     max-width: 720px;
     max-height: 720px;
@@ -133,4 +134,15 @@ canvas {
     50% {
         transform: translateY(-20px);
     }
+}
+
+.modeSelect {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5rem;
+}
+
+.form-switch .form-check-input:checked {
+    background-color: #0077b6;
 }

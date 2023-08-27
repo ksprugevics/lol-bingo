@@ -10,15 +10,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
   <link href="bingo.css" rel="stylesheet">
+  <title>LoL Bingo!</title>
 </head>
 
 <body class="background">
   <div class="header">
     <h1>LoL Bingo!</h1>
   </div>
-  <div class="button-grid-container">
-    <div class="button-grid">
-      <center>
+  <div class="buttonGridContainer">
+    <div>
         <table>
           <tr>
             <td><button id="sq00" class="bingoButton"></button></td>
@@ -46,9 +46,22 @@
           </tr>
         </table>
         <input type="button" class="resetButton btn btn-lg btn-danger btn-block" value="Restart!"/>
-      </center>
     </div>
   </div>
+  <div class="modeSelect">
+    <div class="row align-items-center">
+      <div class="col-auto">
+        <span>Summoner's Rift</span>
+      </div>
+      <div class="col-auto">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="switch">
+          <label class="form-check-label" for="switch">ARAM</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 </body>
   <script src="bingo.js"></script>
 </html>
