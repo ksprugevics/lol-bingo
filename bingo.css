@@ -1,5 +1,4 @@
-html *
-{
+html * {
     color: #e0e1dd;
     font-family: 'Merienda One', cursive !important;
 }
@@ -145,4 +144,10 @@ canvas {
 
 .form-switch .form-check-input:checked {
     background-color: #0077b6;
+}
+
+.disclaimer {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
 }
