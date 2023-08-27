@@ -174,9 +174,10 @@ $(document).ready(function() {
             $(this).prop('checked', !$(this).prop('checked'));
         } else {
             $('.background').toggleClass('aram');
+            stopAnimation();
             setupCards();
         }
-      });
+    });
 
 
     // Confetti

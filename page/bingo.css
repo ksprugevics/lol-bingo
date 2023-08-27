@@ -101,7 +101,7 @@ canvas {
 .splashScreenRight {
     text-align: center;
     top: 45%;
-    right: 3%;
+    right: 8%;
     animation: explode 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s both;
     animation-play-state: paused;
     position: fixed;
@@ -110,14 +110,15 @@ canvas {
 .splashScreenLeft {
     text-align: center;
     top: 45%;
-    left: 3%;
+    left: 8%;
     animation: explode 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s both;
     animation-play-state: paused;
     position: fixed;
 }
 
+
 .splashScreenText {
-    font-size: 8rem;
+    font-size: 4vw;
     white-space: nowrap;
     opacity: 1;
     display: inline-block;
