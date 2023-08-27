@@ -1,8 +1,8 @@
 import csv
 
 # Open the CSV file for reading
-csv_filename = 'resources/cards.csv'
-js_filename = 'resources/cards.js'
+csv_filename = '.cards.csv'
+js_filename = '.cards.js'
 
 rift_cards = []
 aram_cards = []
