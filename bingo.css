@@ -1,7 +1,7 @@
 html *
 {
-   color: #e0e1dd;
-   font-family: 'Merienda One', cursive !important;
+    color: #e0e1dd;
+    font-family: 'Merienda One', cursive !important;
 }
 
 .header {
@@ -62,7 +62,7 @@ html *
 }
 
 .bingoButton:hover {
-	background: #778da9;
+    background: #778da9;
 }
 
 .bingoButtonCheck {
