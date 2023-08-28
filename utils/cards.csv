@@ -1,23 +1,54 @@
 Card,Gamemode
 Someone gets a pentakill,0
-Racial slurs,0
-GG EZ,0
-Something in polish,0
-JG DIFF,1
-Baron,1
+Profanity,0
+Someone says 'GG EZ/EZ',0
+Something in polish/french,0
+Someone says 'JG DIFF',1
+Baron steal,1
 Dragon steal,1
 Red/blue buff steal,1
 Level 7 mastery,0
 100k+ mastery points,0
-"Everyone in a team is Level 5+ mastery""",0
+Everyone in a team is Level 5+ mastery,0
 Everyone has a skin,0
 Skin from the newest skin-line,0
 Yasuo/Yone level 7,0
 Threatening to AFK,0
-"'Dont worry guys, I can carry'",0
+"Someone says 'Dont FF, I can carry'",0
 'Lets FF' / FF15,0
 Accusing someone of feeding,0
-Complaining about an op champ,0
-Complaining about an op item,0
+Complaining about a champion,0
+Complaining about an item,0
 Poro explodes in ARAM,2
 Complaining about a summoner spell,0
+Heal/Exhaust summoner spell,2
+Clarity/Cleanse summoner spell,2
+Everyone has the snowball spell,2
+Get dove 1v5 under your turret,2
+Deal the most amount of damage,0
+Deal the least amount of damage,0
+Support outdamages ADC,1
+Someone saying 'Dont end',0
+ADC has 0 kills while SUP has 3,1
+Matching nicknames,0
+Insulting nickname,0
+Teemo pick,0
+Emote spam,0
+Fail flash,0
+Fail ward,1
+Missed ultimate,0
+Spam ping,0
+Spam ping 'Enemy missing',0
+Spam ping 'Bait',0
+Executed,0
+Scuttle crab dodging skillshots,1
+BM-ing,0
+Off-meta build,0
+Perma split pusher,1
+Successful 1v3,0
+4 honors,0
+Questioning someone's play,0
+Level 1 fiesta,1
+Someone is autofilled,0
+Jungler taxing laner,1
+3 man bot dive,1
