@@ -152,3 +152,21 @@ canvas {
     bottom: 10px;
     left: 10px;
 }
+
+#tutorialButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #3C4856;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content {
+    background-color: #3C4856;
+}

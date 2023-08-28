@@ -157,6 +157,11 @@ $(document).ready(function() {
         $('.splashScreen').remove();
     });
 
+    
+    var tutorialModal = new bootstrap.Modal($('#tutorialModal'));
+    $('#tutorialButton').click(function() {
+        tutorialModal.show();
+    });
 
     $('#switch').change(function() {
         let userConfirmed = true;
