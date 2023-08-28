@@ -5,7 +5,11 @@ This was a small project to improve my HTML/CSS/JavaScript/jQuery/Bootstrap skil
 ## How to play
 You are randomly generated a bingo card containing possible events that may occur in your LoL play session.
 
-Whenever an event occurs in the game, you have to check the corresponding button on your bingo card. To win, you must get 4 events in one row/column/diagonal. To generate a new bingo card you can press the 'Restart!' button.
+Whenever an event occurs in the game, you have to check the corresponding button on your bingo card. To win, you must get 4 events in one row/column/diagonal.
+
+It's important, that you check your cards before the game, so you don't miss any events!
+
+To generate a new bingo card you can press the 'Restart!' button.
 You can also switch between the regular and ARAM gamemodes by using the switch on the top-left corner.
 
 Disclaimer: It is unlikely that you will get a bingo in one game, so be patient!
