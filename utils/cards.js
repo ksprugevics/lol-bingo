@@ -46,7 +46,17 @@ const riftCards = [
     "Level 1 fiesta",
     "Someone is autofilled",
     "Jungler taxing laner",
-    "3 man bot dive"
+    "3 man bot dive",
+    "Someone goes legendary",
+    "Yuumi pick",
+    "Someone goes AFK",
+    "Someone is late to the first wave",
+    "Surrender vote at 15",
+    "Backdoor attempt",
+    "Double teleport",
+    "Top lane goes 0-5",
+    "Invade",
+    "Someone gets 30 kills"
 ];
 
 const aramCards = [
@@ -79,7 +89,6 @@ const aramCards = [
     "Insulting nickname",
     "Teemo pick",
     "Emote spam",
-    "Fail flash",
     "Missed ultimate",
     "Spam ping",
     "Spam ping 'Enemy missing'",
@@ -90,5 +99,9 @@ const aramCards = [
     "Successful 1v3",
     "4 honors",
     "Questioning someone's play",
-    "Someone is autofilled"
+    "Someone goes AFK",
+    "Backdoor attempt",
+    "Snowball kill",
+    "Surrender vote at 8",
+    "Someone gets 30 kills"
 ];

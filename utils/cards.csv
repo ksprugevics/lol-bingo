@@ -34,7 +34,7 @@ Matching nicknames,0
 Insulting nickname,0
 Teemo pick,0
 Emote spam,0
-Fail flash,0
+Fail flash,1
 Fail ward,1
 Missed ultimate,0
 Spam ping,0
@@ -49,6 +49,18 @@ Successful 1v3,0
 4 honors,0
 Questioning someone's play,0
 Level 1 fiesta,1
-Someone is autofilled,0
+Someone is autofilled,1
 Jungler taxing laner,1
 3 man bot dive,1
+Someone goes legendary,1
+Yuumi pick,1
+Someone goes AFK,0
+Someone is late to the first wave,1
+Surrender vote at 15,1
+Backdoor attempt,0
+Double teleport,1
+Top lane goes 0-5,1
+Snowball kill,2
+Surrender vote at 8,2
+Invade,1
+Someone gets 30 kills,0
